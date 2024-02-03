@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.frame {
+    width: 300px;
+    height: 300px;
+    background: mediumseagreen;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    cursor: pointer;
+    /* position: relative; */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 150px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+
+/* x */
+.open .line1 {
+    animation: openLine1 1s forwards;
+    position: absolute;
+}
+
+.open .line2 {
+    animation: openLine2 1s forwards;
+}
+
+.open .line3 {
+    animation: openLine3 1s forwards;
+    position: absolute;
+}
+
+
+@keyframes openLine1 {
+    0% {
+        transform: translateY(30px);
+    }
+
+    60% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes openLine2 {
+    0% {
+        transform: scale(100%);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes openLine3 {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+.close .line1 {
+    animation: closeLine1 1s forwards;
+    position: absolute;
+}
+
+.close .line2 {
+    animation: closeLine2 1s forwards;
+}
+
+.close .line3 {
+    animation: closeLine3 1s forwards;
+    position: absolute;
+}
+
+@keyframes closeLine1 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    60% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes closeLine2 {
+    0% {
+        transform: scale(0);
+    }
+
+    65% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes closeLine3 {
+    0% {
+        transform: rotate(135deg)
+    }
+
+    60% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(30px)
+    }
+}
